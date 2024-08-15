@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int thefactors(int n) {
+    
+    for (int j = 1;j<=n;j++) {
+        if (n%j==0) {
+            cout << j << " ";
+        }
+    }
+}
+int main () {
+    int n = 88;
+    cout << thefactors(n) << endl;
+  return 0;
+}
