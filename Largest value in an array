@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int LargestNumber(int* arr,int size) {
+    int largest_num = *arr;
+    for(int i = 0;i<size;i++) {
+        if (*(arr+i)>largest_num) {
+            largest_num = *(arr+i);
+        }
+    }
+    return largest_num;
+}
+int main() {
+    int arr[] = {45,33,10,51,22,17,6};
+    int N = sizeof(arr)/sizeof(arr[0]);
+    int P = LargestNumber(arr, N);
+    cout << "The largest number in this array is:" << P << endl;
+    return 0;
+}
+//time complexity of this is O(n)
