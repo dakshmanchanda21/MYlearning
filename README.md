@@ -1,2 +1,1 @@
-# MYlearning
-Prime factors checking
+
