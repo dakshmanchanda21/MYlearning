@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int largestindex(int arr[],int n) {
+    int largestnum = 0;
+    for (int l =1;l<n;l<l++) {
+        if (arr[l]>arr[largestnum]) {
+            largestnum = l;
+        }
+    }
+    return largestnum;
+}
+int main() {
+    int arr[] = {16,41,22,23,11,8,34};
+    int P = sizeof(arr)/sizeof(arr[0]);
+   int index = largestindex(arr,P);
+    cout << "Largest number is at index:" << index << endl;
+    return 0;
+}
