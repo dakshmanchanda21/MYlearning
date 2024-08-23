@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int greatestcommondivisor(int a,int b) {
+    int result = min(a,b);
+    while(result>0) {
+        if (a%result==0 && b%result==0) {
+            break;
+        }
+        result--;
+    }
+    return result;
+}
+int main() {
+    int a,b;
+    cout << "Enter the two numbers:";
+    cin >> a >> b;
+      cout << "The greatest common divisor between" << a << "&" << b << "is:" << greatestcommondivisor(a,b) << endl;
+
+    return 0;
+}
