@@ -1,0 +1,43 @@
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+  
+int main() 
+{ 
+    vector<vector<int> > p{ {4,17,3},
+                            {9,22,6},
+                            {37,8,1}};
+    vector<vector<int> > q{{31,14,2},
+                           {22,0,8},
+                           {13,14,5}};
+        vector<vector<int>> z(p.size(), vector<int>(p[0].size()));
+        
+        for (int i = 0; i < p.size(); i++) { 
+        for (int j = 0; j < p[i].size(); j++) {
+            cout << p[i][j] << " "; 
+        }
+        cout << endl;
+    }
+     for (int l = 0; l < q.size(); l++) { 
+        for (int w = 0; w < q[l].size(); w++) {
+            cout << q[l][w] << " "; 
+        }
+        cout << endl;
+    } 
+  
+  for(int a=0;a<z.size();a++) {
+      for(int b=0;b<z[a].size();b++) {
+          z[a][b]=p[a][b]+q[a][b];
+      }
+  }
+  for(int c=0;c<z.size();c++) {
+      for(int d=0;d<z[c].size();d++) {
+          cout << z[c][d] << " ";
+      }
+      cout << endl;
+  }
+  
+  
+  
+    return 0; 
+} 
