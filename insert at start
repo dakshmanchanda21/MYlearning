@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void insertatstart(int arr[],int n,int element) {
+    for (int i = n; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[0] = element;
+    n++; // 
+}
+   
+
+
+int main() { 
+    int n = 5;
+    int arr[n] = {4,5,7,1,8};
+    int element = 9;
+     cout << "Final array is:" << endl;
+    insertatstart(arr,n,element);
+    
+    for(int i=0;i<=n;i++) {
+       cout << arr[i] << " ";
+    }
+   
+
+    return 0;
+}
