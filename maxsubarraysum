@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int maximumsubarraysum(int arr[],int n) {
+    int holder = arr[0];
+    int currentsum = arr[0];
+    for(int i=1;i<n;++i) {
+        currentsum = max(currentsum+arr[i],arr[i]);
+        holder = max(holder,currentsum);
+    }
+    return holder;
+}
+
+int main() {
+    int n = 8;
+    int arr[n] = {-2,-3,4,-1,-2,1,5,-3};
+    int P = maximumsubarraysum(arr,n);
+    cout << P << endl;
+    return 0;
+}
